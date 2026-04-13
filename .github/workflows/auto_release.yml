@@ -34,9 +34,9 @@ jobs:
           mkdir build
 
           if [ -f CI/auto_release_ignore.txt ]; then
-            zip -r build/release.zip . -x@CI/auto_release_ignore.txt
+            zip -r build/calc_exp.zip . -x@CI/auto_release_ignore.txt
           else
-            zip -r build/release.zip .
+            zip -r build/calc_exp.zip .
           fi
 
       - name: Criar Release no GitHub
@@ -44,6 +44,6 @@ jobs:
         with:
           tag_name: ${{ steps.version.outputs.VERSION }}
           name: Release ${{ steps.version.outputs.VERSION }}
-          files: build/release.zip
+          files: build/calc_exp.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
