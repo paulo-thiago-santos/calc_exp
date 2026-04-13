@@ -28,8 +28,8 @@ jobs:
       # Run tests
       - name: Run tests
         run: |
-          chmod +x .github/workflows/tests.sh
-          ./.github/workflows/tests.sh
+          chmod +x tests/tests.sh
+          ./tests/tests.sh
         #continue-on-error: true
         
       # Check result
