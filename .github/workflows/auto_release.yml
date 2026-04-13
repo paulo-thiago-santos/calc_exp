@@ -19,9 +19,9 @@ jobs:
 
       - name: Criar lista de exclusão
         run: |
-          if [ -f CI/release_ignore.txt ]; then
+          if [ -f CI/auto_release_ignore.txt ]; then
             echo "Usando release_ignore.txt"
-            cat CI/release_ignore.txt
+            cat CI/auto_release_ignore.txt
           else
             echo "Arquivo release_ignore.txt não encontrado"
           fi
@@ -30,8 +30,8 @@ jobs:
         run: |
           mkdir build
 
-          if [ -f CI/release_ignore.txt ]; then
-            zip -r build/release.zip . -x@release_ignore.txt
+          if [ -f CI/auto_release_ignore.txt ]; then
+            zip -r build/release.zip . -x@auto_release_ignore.txt
           else
             zip -r build/release.zip .
           fi
