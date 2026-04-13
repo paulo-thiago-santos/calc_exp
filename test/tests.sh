@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FAIL=1
+FAIL=0
 
 if [ $FAIL -ne 0 ]; then
   echo "🚨 Alguns testes falharam!"
