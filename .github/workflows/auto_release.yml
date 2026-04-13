@@ -31,7 +31,7 @@ jobs:
           mkdir build
 
           if [ -f CI/auto_release_ignore.txt ]; then
-            zip -r build/release.zip . -x@auto_release_ignore.txt
+            zip -r build/release.zip . -x@CI/auto_release_ignore.txt
           else
             zip -r build/release.zip .
           fi
