@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,9 +28,9 @@ jobs:
       # Run tests
       - name: Run tests
         run: |
-          chmod +x tests.sh
-          ./tests.sh
-        continue-on-error: true
+          chmod +x .github/workflows/tests.sh
+          ./.github/workflows/tests.sh
+        #continue-on-error: true
         
       # Check result
       - name: Só se falhar
