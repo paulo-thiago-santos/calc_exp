@@ -28,8 +28,8 @@ jobs:
       # Run tests
       - name: Run tests
         run: |
-          chmod +x tests/tests.sh
-          ./tests/tests.sh
+          chmod +x CI/tests.sh
+          ./CI/tests.sh
         #continue-on-error: true
         
       # Check result
